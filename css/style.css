@@ -1,0 +1,246 @@
+@charset "UTF-8";
+* {
+margin: 0;
+padding: 0;
+outline: none;
+}
+
+html {
+    height: 100%;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    color: #333;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 1em;
+    line-height: 135%;
+    float: left;
+}
+
+a{
+    color: #bdbaba;
+    text-decoration: none;
+    transition: all.6s ease;
+}
+
+a:hover{
+    color: #efdea0;
+}
+
+.clear{
+    clear: both;
+}
+/*Стили для шапки*/
+header{
+    width: 98%;
+    float: left;
+    padding: 1%;
+    background-color: #fafafa;
+    border-bottom: 2px solid silver;
+    margin-bottom: 20px;
+}
+header #logo{
+    width: 30%;
+    float: left;
+}
+
+header #logo a{
+    color: rgb(95, 90, 129);
+    font-size: 1.5em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header #menuHead{
+    padding: 0;
+    list-style: none;
+    height: 30px;
+
+    width: 34%;
+    float: left;
+}
+
+header #menuHead div{
+    color: rgb(98, 119, 187);
+    text-transform: uppercase;
+    float: left;
+    margin-right: 3%;
+    padding: 10px;
+    background-color: rgba(30, 143, 255, 0.144);
+}
+
+header #menuHead div:hover{
+    background-color: rgba(30, 143, 255, 0.308);
+}
+
+header #regAuth{
+width: 30%;
+float: right;
+text-align: right;
+}
+
+/*Стили для основной части документа*/
+#wrapper{
+    width: 90%;
+    margin-left: 10%;
+    float: left;
+}
+
+#wrapper #map{
+    width: 68%;
+    height: 600px;
+    margin-right: 2%;
+    background-image: url(../img/1.jpg);
+    background-size: cover;
+    float: left;
+}
+#wrapper #search{
+    width: 20%;
+    height: 600px;
+    background-color: silver;
+    float: left;
+}
+
+#wrapper #search input[type="text"]{
+    width: 70%;
+    float: left;
+    height: 4%;
+    border: 1px solid #333;
+    background-color: white;
+}
+#wrapper #search input[type="button"]{
+    width: 30%;
+    height: 4%;
+    background-color: white;
+}
+
+#wrapper #search #messageShow{
+    font-size: 1.2em;
+    width: 100%;
+    float: left;
+    color: red;
+    text-align: center;
+}
+
+/*Стили для SVG*/
+#wrapper #map svg{
+    size: cover;
+    width: 100%;
+    height: 600px;
+}
+
+#wrapper #map a{
+	fill: darkturquoise;
+	opacity: .4;
+}
+
+
+#wrapper #map a:hover{
+    transition: .2% ease;
+    opacity: .7;
+}
+
+
+/*Стили для footer*/
+
+footer{
+    width: 98%;
+    float: left;
+    padding: 1%;
+    background-color: #fafafa;
+    border-top: 1px solid silver;
+    margin-top: 10px;
+}
+
+footer #social{
+    float: left;
+    width: 24%;
+}
+
+footer #social a{
+    margin-right: 3%;
+}
+
+footer #contacts{
+    color: silver;
+    float: left;
+    width: 34%;
+    text-align: center;
+    margin-right: 3%;
+}
+
+footer #rights {
+    float: right;
+    width: 30%;
+    text-align: right;
+    font-size: 1em;
+}
+
+/*Стили для текста about*/
+
+#about_us{
+    float: left;
+    width: 80%;
+    margin-left: 10%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 125%;
+}
+
+ul li{
+margin-left: 4%;
+}
+
+ ol{
+    width: 96%;
+    padding: 2%;
+}
+
+ ol li{
+     float: left;
+    width: 91%;
+    margin-top: 0.5%;
+    margin-left: 4%;
+}
+
+ol li strong{
+    color: darkslateblue;
+}
+
+ p{
+    text-indent: 20px;
+    width: 96%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+h3{
+    width: 89%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    margin-left: 4%;
+    color: darkslateblue;
+}
+
+h1{
+    text-align: center;
+    color: darkslateblue;
+    margin-bottom: 3%;
+}
+
+/*Стили для feedback*/
+#feedback{
+    float: left;
+    column-count: 3;
+    column-gap: 20%;
+}
+
+#feedback a{
+    color: rgb(98, 119, 187);
+}
+
+#feedback a:hover{
+    color: red;
+}
+
