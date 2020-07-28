@@ -4,13 +4,14 @@
     <?php 
         $title = "Навигация по РНПЦ OMP им. Н.Н.Александрова";
         require_once "blocks/head.php";
+        $blocks = getBlocks(5);
     ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready (function () {
             $('#search_button').click (function () {
-                $('messageShow').hide();
-                var search = $("#search").val ();
+                $("#messageShow").hide();
+                var search = $("#search_label").val ();
                 var fail = "";
                 if (search.length < 3) fail = "Введите корректную информацию";
                 if (fail != ""){
@@ -23,19 +24,16 @@
     </script>
 </head>
 <body>
-    <?php require_once"blocks/header.php"?>
+    <?php require_once "blocks/header.php"?>
 
     <div id="wrapper">
         <div id="map"> 
             <svg viewBox="0 0 640 480">
                 
-                <a href="Clinic.html">
-                    <polygon class="st0" points="110.6,388.3 97,386.7 113.4,317.8 126.1,317.8 "/>
-                    </a>
-                <a href="Morgue.html" title="МОРГ">
+                <a href="Morgue.html" title='МОРГ'>
                     <polygon class="st0" points="81.7,442.9 62.6,444.1 70,414.3 87.3,414.3 "/>
                 </a>
-                <a href="Church.html">
+                <a href="Church.html" title="Церковь">
                     <rect x="134.3" y="192.2" class="st0" width="15.3" height="18.9"/>
                 </a>
                 <a href="Mammalogy.html">
@@ -98,9 +96,17 @@
         </div>
         <div id="search">
          
-            <input type="text" placeholder="Поиск..." id="search" name="search"><br />
-            <div id="messageShow"></div>
-            <input type="button" name="search_button" id="search_button" value="Искать">
+            <input type="text" placeholder="Поиск..." id="search_label" name="search"><br />
+            <div id="messageShow"></div><br />
+            <input type="submit" action="" name="search_button" id="search_button" value="Искать">
+
+            <?php
+                for($i = 0; $i<count($blocks); $i++){
+                    echo "<div id=\"result\">";
+                    echo $blocks[$i]["id"].'. '.$blocks[$i]["block"].' </div>';
+                }
+            ?>
+
         </div>
     </div>
 
